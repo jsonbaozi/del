@@ -1,0 +1,29 @@
+@model Lincoln.Models.Game
+
+
+<div class="text-align:center">
+  <a href="javascript:history.back()">
+    <h2> < Back</h2>
+  </a>
+</div>
+<div class="table">
+  <div class="container">
+    <div id="loading"></div>
+    <img src="@Url.Content(Model.Boxart)" alt="@Model.Name" id="boxart" />
+  </div>
+  <div class="twitch">
+    <text>Game Name: </text>
+    <text>@Model.Name</text>
+  </div>
+  <div class="twitch")>
+    <text>TwitchGameId: </text>
+    <text>@Model.TwitchGameId</text>
+  </div>
+  <div class="twitch">
+    <text>Category Sections:</text>
+    @foreach (var item in Model.CategorySections)
+    {
+      <li>item.</li>
+    }
+  </div>
+</div>>

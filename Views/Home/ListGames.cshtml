@@ -1,0 +1,23 @@
+@model IEnumerable<Lincoln.Models.Game>
+
+
+  <div>
+    <div class="gallery" id="boxart">
+      @foreach (var item in Model)
+      {
+        <figure>
+          <div style="text-align:center;background-color:slateblue;color:black">@item.Name</div>
+          <a href="Game/@item.Slug">
+            <img src="@Url.Content(@item.Boxart)" alt="@item.Name" class="gallery__img" />
+          </a>
+          <div style="text-align:center;color:black;background-color:green">
+            @if (@item.SupportsAddons)
+            {<p>Supports Addons!</p>}
+          </div>
+
+        </figure>
+      }
+    </div>
+
+  </div>
+
